@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_news.view.*
 
-class NewsAdapter():RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
+class NewsAdapter :RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
     class ViewHolder(itemView : View):RecyclerView.ViewHolder(itemView)
 
     private var listdatanews : List<RespondDataNewsItem>? = null
@@ -33,10 +33,10 @@ class NewsAdapter():RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        if (listdatanews == null){
-            return  0
+        return if (listdatanews == null){
+            0
         }else{
-            return  listdatanews!!.size
+            listdatanews!!.size
         }
     }
 }

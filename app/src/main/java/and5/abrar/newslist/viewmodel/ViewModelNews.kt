@@ -9,10 +9,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class ViewModelNews:ViewModel() {
-    lateinit var liveDataNews : MutableLiveData<List<RespondDataNewsItem>>
-    init {
-        liveDataNews = MutableLiveData()
-    }
+    var liveDataNews : MutableLiveData<List<RespondDataNewsItem>> = MutableLiveData()
     fun getLiveNewsObserver() : MutableLiveData<List<RespondDataNewsItem>>{
         return  liveDataNews
     }
